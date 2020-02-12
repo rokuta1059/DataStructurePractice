@@ -1,4 +1,4 @@
-package day2_2;
+package day_2_2;
 
 /**
  * 파스칼 삼각형을 만드는 클래스
