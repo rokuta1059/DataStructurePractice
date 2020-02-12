@@ -1,4 +1,4 @@
-package day4;
+package day_4;
 
 interface Queue<T> {
 

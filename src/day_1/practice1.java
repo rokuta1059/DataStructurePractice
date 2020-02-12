@@ -1,4 +1,4 @@
-package day1;
+package day_1;
 
 /**
  * 파스칼 삼각형을 만들고 출력한다.

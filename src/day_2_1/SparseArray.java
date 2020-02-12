@@ -1,4 +1,4 @@
-package day2_1;
+package day_2_1;
 
 /**
  * 희소 배열을 만드는 클래스

@@ -1,4 +1,4 @@
-package day4;
+package day_4;
 
 /**
  * Queue의 상속 클래스

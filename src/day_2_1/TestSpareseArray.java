@@ -1,4 +1,4 @@
-package day2_1;
+package day_2_1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ public class TestSpareseArray {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner inFile = new Scanner(new File("src/" +
-                "day2_1/input.txt"));
+                "day_2_1/input.txt"));
         int size, index, value;
         size = inFile.nextInt();
 

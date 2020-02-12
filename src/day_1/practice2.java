@@ -1,4 +1,4 @@
-package day1;
+package day_1;
 
 /**
  * 1차원 배열을 2차원 배열로 만든다.

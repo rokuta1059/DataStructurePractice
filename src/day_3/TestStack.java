@@ -1,4 +1,4 @@
-package day3;
+package day_3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class TestStack {
      */
     public static void checkParenthesis() throws FileNotFoundException {
         Scanner inFile = new Scanner(new File("src/" +
-                "day3/input.txt"));
+                "day_3/input.txt"));
 
         // 괄호를 저장할 스택을 생성한다
         LinkedStack<String> stack = new LinkedStack<String>();

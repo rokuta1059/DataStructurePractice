@@ -1,4 +1,4 @@
-package day3;
+package day_3;
 
 /**
  * Stack의 상속 클래스

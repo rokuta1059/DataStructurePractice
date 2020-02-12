@@ -1,4 +1,4 @@
-package day2_2;
+package day_2_2;
 
 public class Node {
 
