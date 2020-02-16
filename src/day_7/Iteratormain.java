@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class Iteratormain {
 
+    /**
+     * 리스트의 최대값을 찾아 반환한다.
+     * @param list 최대값을 찾을 리스트
+     * @return 최대값
+     */
     public static int findMax(LinkedList<Integer> list) {
         Iterator<Integer> it = list.iterator();
         int max = 0;
@@ -15,9 +20,20 @@ public class Iteratormain {
         return max;
     }
 
+    /**
+     * 선택 정렬을 수행한다.
+     * @param list 선택 정렬을 수행할 리스트
+     * @return 선택 정렬이 완료된 리스트
+     */
     public static LinkedList<Integer> selectionSort(LinkedList<Integer> list) {
+
+        // 최대값을 순서대로 저장할 리스트를 생성한다.
         LinkedList<Integer> sortedList = new LinkedList<Integer>();
+
+        // 입력받은 리스트의 반복자를 생성한다.
         Iterator<Integer> listit = list.iterator();
+
+        // 반복자를 이용해 탐색하고 최대값을 새로운 리스트에 저장한다.
         while (listit.hasNext()) {
             Iterator<Integer> it = list.iterator();
             int max = 0;
@@ -39,17 +55,50 @@ public class Iteratormain {
         return sortedList;
     }
 
+    /**
+     * 중복된 데이터의 수를 계산하고 반환한다.
+     * @param list
+     * @return
+     */
     public static LinkedList<Word> countDup(LinkedList<Integer> list) {
-        LinkedList<Word> wordList = new LinkedList<Word>();
+
+        // 입력받은 리스트의 반복자를 생성한다.
         Iterator<Integer> it = list.iterator();
+
+        // 반환할 리스트와 반복자를 생성한다.
+        LinkedList<Word> wordList = new LinkedList<Word>();
+        Iterator<Word> wordIt = wordList.iterator();
+
+        // 입력받은 리스트의 첫 번째 값을 반환할 리스트에 추가한다.
         int index = it.next();
         wordList.insert(new Word(index));
-        while (it.hasNext()) {
 
+        while (it.hasNext()) {
+            index = it.next();
+
+            wordIt = wordList.iterator();
+            boolean isContain = false;
+
+            // 반환할 리스트를 탐색하여
+            // 이미 값이 존재할 경우 카운트를 증가시킨다.
+            while(wordIt.hasNext()) {
+                Word wordTemp = wordIt.next();
+                if(wordTemp.equals(index)) {
+                    wordTemp.countUp();
+                    isContain = true;
+                }
+                if (isContain) break;
+            }
+
+            // 값이 존재하지 않은 경우 새로 추가해준다.
+            if (!isContain) {
+                wordList.insert(new Word(index));
+            }
 
         }
 
         return wordList;
+
     }
 
     public static void main(String[] args) {

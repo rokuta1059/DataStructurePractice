@@ -31,7 +31,9 @@ class Word {
         return another.index == index;
     }
 
-    public void countup() {
+    public boolean equals(int another) { return index == another;}
+
+    public void countUp() {
         count++;
     }
 }
