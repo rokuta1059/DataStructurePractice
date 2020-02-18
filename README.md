@@ -59,3 +59,5 @@
 ### 1. work1: airplaneManager (항공권 예약 프로그램)
 
 - 연결 구조를 이용한 항공기 예약 프로그램 설계
+
+- 연결 리스트(Linked List), 삽입 정렬(Insert-sort), 순차 검색(Sequential Search)
