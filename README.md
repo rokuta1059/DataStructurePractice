@@ -61,3 +61,9 @@
 - 연결 구조를 이용한 항공기 예약 프로그램 설계
 
 - 연결 리스트(Linked List), 삽입 정렬(Insert-sort), 순차 검색(Sequential Search)
+
+### 2. work2: mazeSearcher (미로 찾기 프로그램)
+
+- LinkedStack을 활용한 역추적 미로 찾기
+
+- Stack, 연결 리스트(Linked List), 파일 입출력
