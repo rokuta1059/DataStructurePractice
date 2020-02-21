@@ -54,6 +54,12 @@
 
 - 7.4 반복자를 이용한 중복 데이터 계산
 
+### 8. day_8: Recursion(재귀) 연습
+
+- 8.1 연결 리스트(Linked List)의 재귀를 이용한 구현
+
+- 8.2 연결 리스트(Linked List)의 재귀를 이용한 함수 구현
+
 ## B. 과제 파일
 
 ### 1. work1: airplaneManager (항공권 예약 프로그램)
