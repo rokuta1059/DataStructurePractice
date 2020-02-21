@@ -6,6 +6,7 @@ public class Iteratormain {
 
     /**
      * 리스트의 최대값을 찾아 반환한다.
+     *
      * @param list 최대값을 찾을 리스트
      * @return 최대값
      */
@@ -22,6 +23,7 @@ public class Iteratormain {
 
     /**
      * 선택 정렬을 수행한다.
+     *
      * @param list 선택 정렬을 수행할 리스트
      * @return 선택 정렬이 완료된 리스트
      */
@@ -57,6 +59,7 @@ public class Iteratormain {
 
     /**
      * 중복된 데이터의 수를 계산하고 반환한다.
+     *
      * @param list
      * @return
      */
@@ -81,9 +84,9 @@ public class Iteratormain {
 
             // 반환할 리스트를 탐색하여
             // 이미 값이 존재할 경우 카운트를 증가시킨다.
-            while(wordIt.hasNext()) {
+            while (wordIt.hasNext()) {
                 Word wordTemp = wordIt.next();
-                if(wordTemp.equals(index)) {
+                if (wordTemp.equals(index)) {
                     wordTemp.countUp();
                     isContain = true;
                 }
@@ -100,6 +103,32 @@ public class Iteratormain {
         return wordList;
 
     }
+
+    /**
+     * 중복된 값을 제거해주는 메소드
+     *
+     * @param list 중복된 값을 제거해줄 리스트
+     * @return 중복된 값이 제거된 리스트
+     */
+    public static LinkedList<Integer> removeDup(LinkedList<Integer> list) {
+        LinkedList<Word> wordList;
+        LinkedList<Integer> newList = new LinkedList<Integer>();
+
+        // countDup 메소드를 활용하여 중복된 값이 지워진
+        // Word 객체 리스트를 만든다.
+        wordList = countDup(list);
+        Iterator<Word> word = wordList.iterator();
+
+        // Word객체가 저장된 리스트에서
+        // index값만을 새로운 리스트에 저장해준다.
+        while (word.hasNext()) {
+            newList.insert(word.next().index());
+        }
+
+        return newList;
+
+    }
+
 
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList<Integer>();
@@ -132,15 +161,13 @@ public class Iteratormain {
                 System.out.println("size: " + list.size());
             } else if (command.equals("p"))
                 list.print();
-            /**
-             else if (command.equals("d")) {
-             LinkedList<Integer> list1 = removeDup(list);
-             list1.print();
-             }
-             */
+            else if (command.equals("d")) {
+                LinkedList<Integer> list1 = removeDup(list);
+                list1.print();
+            }
 
 
-                // 데이터와 데이터 개수를 필드로 하는 Word 클래스 만들어 사용
+            // 데이터와 데이터 개수를 필드로 하는 Word 클래스 만들어 사용
             else if (command.equals("c")) {
                 LinkedList<Word> list2 = countDup(list);
                 System.out.println(list2);
