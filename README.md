@@ -60,6 +60,8 @@
 
 - 8.2 연결 리스트(Linked List)의 재귀를 이용한 함수 구현
 
+### 9. day_9: 이진 탐색 트리(BST) 연습
+
 ## B. 과제 파일
 
 ### 1. work1: airplaneManager (항공권 예약 프로그램)
